@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/METIS-Logo.png" type="image/x-icon">
+  <title>METIS Chatbot</title>
+  
+  <!-- Semantic UI dependencies -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css'>
+  
+  <!-- Chatbot Dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Css -->
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="./css/chatbot.css">
+
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="ui sidebar inverted vertical menu">
+  <a class="item" href="http://www.eafit.edu.co/">
+    Página de EAFIT
+  </a>
+  <a class="item" href="https://interactiva.eafit.edu.co/ei/">
+    Interactiva EAFIT
+  </a>
+  <a class="item" href="https://app.eafit.edu.co/ulises/login.do">
+    Ulises EAFIT
+  </a>
+</div>
+<div class="pusher">
+  <div class="top ui secondary menu">
+    <a class="item sidebar" onclick="runSideBar()">
+      <i class="icon sidebar"></i>
+    </a>
+    <a href="#" class="item">
+      <img src="./images/METIS Logo 3.png"/>
+    </a>
+    <a class="item">METIS</a>
+    <div class="right menu">
+      <a class="item" href="./html/login.html">Ingresar</a>
+      <a class="item" href="http://www.eafit.edu.co/programas-academicos/posgrado/maestria-ingenieria/Paginas/inicio.aspx">Ayuda</a>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+
+<!-- Chatbot -->
+<div class="chat">
+    <div class="messages">
+      <div class="messages-content"></div>
+      <div class="suggession"></div>
+    </div>
+    <form class="message-box" id="mymsg" method="POST">
+      <input type="text" id="MSG" name="MSG" class="message-input" placeholder="Pregunta..." >
+     
+      <i class="fas fa-microphone" id="start-record-btn"></i>
+      <button type="submit" class="message-submit">
+          <i class="fas fa-arrow-right"></i>
+  
+      </button>
+    </form>
+    <h3 class="no-browser-support" hidden>Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+  </div>
+  <div class="bg"></div>
+
+
+  <!-- Semantic UI Dependencies -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.js'></script>
+  <script src="./js/navbar.js"></script>
+
+  <!-- Chatbot Dependencies -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+  <script src="./js/chatbot.js"></script>
+</body>
+</html>

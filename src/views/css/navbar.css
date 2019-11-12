@@ -1,0 +1,23 @@
+.top.ui.menu {
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2)
+}
+
+.top.ui.menu .item {
+  padding: 20px;
+}
+
+.top.ui.secondary.menu .dropdown.item:hover, .top.ui.secondary.menu .link.item:hover, .top.ui.secondary.menu a.item:hover {
+  background: none;
+}
+
+.ui.sidebar ~ .fixed, .ui.sidebar ~ .pusher {
+  width: 100%;
+}
+
+.ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {
+  width: calc(100% - 260px);
+}
+
+.pushable > .pusher {
+  transition: transform 500ms ease, width 800ms ease;
+}

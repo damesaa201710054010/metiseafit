@@ -1,0 +1,77 @@
+EI0800  pago de 3 créditos de trabajo de grado  3                          
+
+EI0801  pago de 6 créditos de trabajo de grado  6                          
+
+EI0802  pago de 4 créditos de trabajo de grado  4                          
+
+EI0803  pago de 2 créditos de trabajo de grado  2                          
+
+EI0804  pago de 8 créditos de trabajo de grado  8                          
+
+EI0805  pago de 5 créditos de trabajo de grado  5                          
+
+EI0806  pago de otros 4 créditos de proyecto de grado  4                          
+
+EI0807  curso proyecto de 3 créditos      3                          
+
+EI0808  proyecto especial 1 créditos       1                          
+
+EI0809  proyecto de grado de 4 créditos               4                          
+
+EI0810  pago de 1 crédito del trabajo de grado  1                          
+
+EI0811  proyecto especial 2 créditos       2                          
+
+EI0812  proyecto especial 6 créditos       6                          
+
+EI0813  herramientas de investigación   3                          
+
+EI0814  seminario i         1                          
+
+EI0815  seminario ii        1                          
+
+EI0816  seminario iii       1                          
+
+EI0817  métodos y herramientas en diseño preliminar                                 
+
+EI0818  pago de 2 créditos del trabajo de grado 2                          
+
+EI0819  segundo pago de 1 crédito del trabajo de grado 1                          
+
+EI0820  pasantía de corta duración          0                          
+
+EI0821  pasantías extendidas      0                          
+
+EI0822  viajes académicos           0                          
+
+EI0829  tópicos especiales - 2 créditos    2                          
+
+EI0830  tópicos especiales - 3 créditos    3                          
+
+EI0831  tópicos especiales - 6 créditos    6                          
+
+EI0832  tópicos especiales - 9 créditos    9                          
+
+EI0833  tópicos especiales - 12 créditos 12                        
+
+EI0834  tópicos especiales - 4 créditos    4                          
+
+EI0835  tópicos especiales - 5 créditos    5                          
+
+EI0850  trabajo de grado de 12 créditos 12                        
+
+EI0851  trabajo de grado de 24 créditos 24                        
+
+EI0852  trabajo de grado de 9 créditos   9                          
+
+EI0853  trabajo de grado de 18 créditos 18                        
+
+EI0854  trabajo de grado de 21 créditos 21                        
+
+EI0855  trabajo de grado de 19 créditos 19                        
+
+EI0856  trabajo de grado de 20 créditos 20                        
+
+EI0857  trabajo de grado de 22 créditos 22                        
+
+EI0858  trabajo de grado de 23 créditos

@@ -1,0 +1,28 @@
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css')
+link(rel='stylesheet' href='../css/navbar.css')
+
+.ui.sidebar.inverted.vertical.menu
+    a.item(href='http://www.eafit.edu.co/')
+        p Página de EAFIT
+    a.item(href="https://interactiva.eafit.edu.co/ei/")
+        p Interactiva EAFIT
+    a.item(href="https://app.eafit.edu.co/ulises/login.do")
+        p Ulises EAFIT
+
+.pusher
+    .top.ui.secondary.menu
+        a.item.sidebar(onclick='runSideBar()')
+            i.icon.sidebar
+        a.item(href="#")
+            img(src="../images/METIS Logo 3.png", alt="METIS Logo")
+        a.item
+            p METIS
+        .right.menu
+            a.item(href="../html/login.html")
+                p Ingresar
+            a.item(href="http://www.eafit.edu.co/programas-academicos/posgrado/maestria-ingenieria/Paginas/inicio.aspx")
+                p Ayuda
+
+script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.js')
+script(src='../js/navbar.js')
