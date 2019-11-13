@@ -49,3 +49,5 @@ Thumbs.db
 
 # METIS Private Token
 #src/config/METIS-ES-a64062639f09.json
+
+.env

@@ -6,6 +6,7 @@ const cors = require('cors');
 var path = require('path');
 const app = express();
 const ROOT_DIR  = require('./rootDir.js');
+const mySqlConnection = require('./database');
 
 // A unique identifier for the given session.
 const sessionId = uuid.v4();
@@ -88,9 +89,43 @@ async function runSample(userMessage, projectId = 'metis-es-lfflxf') {
 function verifyCalc(response) {
   if (response.fulfillmentText.includes("#calc")) {
     console.log("It Works!");
-    response.fulfillmentText = 21+2;
+    assignFunctionToCalc(response);
   } else {
     console.log("ok :/");
+  }
+}
+
+function assignFunctionToCalc(response) {
+  const responseSubstring = response.fulfillmentText.substring(6, response.fulfillmentText.length - 1);
+  const querySubstring = response.queryText.substring(12, response.queryText.length);
+  console.log('QUeryjasd -> ', querySubstring);
+  switch (responseSubstring) {
+    case "stuff":
+      console.log("It Works! x2");
+      mySqlConnection.query('SELECT * FROM `estudiante`', function (error, results, fields) {
+        if (error) throw error;
+        console.log('The result is: ', results[0]);
+        console.log('\n\n-> codigo del estudiante: ', results[0].codigoEstudiante);
+      });
+      mySqlConnection.end();    
+      break;
+    case "inscripciones":
+      var auxiliary;
+      console.log("Inscripciones working");
+      mySqlConnection.query('SELECT * FROM `estudiante` WH', function (error, results, fields) {
+        if (error) throw error;
+        console.log('The result is: ', results[0]);
+        console.log('\n\n-> codigo del estudiante: ', results[0].codigoEstudiante);
+        auxiliary = results[0].nombre ;
+
+      });
+      mySqlConnection.end();   
+
+      response.fulfillmentText = "Eres: " + auxiliary;
+      break;
+    default:
+      console.log('Dem it!');
+      break;
   }
 }
 
