@@ -17,13 +17,13 @@ $('#start-record-btn').on('click', function(e) {
 recognition.onresult = (event) => {
   const speechToText = event.results[0][0].transcript;
   document.getElementById("MSG").value= speechToText;
-  console.log(speechToText)
-  insertMessage()
-}
+  console.log(speechToText);
+  insertMessage();
+};
 
 function listendom(no){
-  console.log(no)
-  console.log(document.getElementById(no))
+  console.log(no);
+  console.log(document.getElementById(no));
 document.getElementById("MSG").value= no.innerHTML;
   insertMessage();
 }
@@ -48,7 +48,7 @@ function insertMessage() {
     return false;
   }
   $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-  fetchmsg() 
+  fetchmsg();
   
   $('.message-input').val(null);
   updateScrollbar();
@@ -56,13 +56,11 @@ function insertMessage() {
 }
 
 document.getElementById("mymsg").onsubmit = (e)=>{
-  e.preventDefault() 
+  e.preventDefault();
   insertMessage();
-}
+};
 
 function serverMessage(response2) {
-
-
   if ($('.message-input').val() != '') {
     return false;
   }
@@ -75,7 +73,6 @@ function serverMessage(response2) {
     $('<div class="message new"><figure class="avatar"><img src="../images/METIS-Logo.png" /></figure>' + response2 + '</div>').appendTo($('.mCSB_container')).addClass('new');
     updateScrollbar();
   }, 100 + (Math.random() * 20) * 100);
-
 }
 
 function fetchmsg(){
@@ -85,8 +82,8 @@ function fetchmsg(){
   
   const data = new URLSearchParams();
   for (const pair of new FormData(document.getElementById("mymsg"))) {
-      data.append(pair[0], pair[1]);
-      console.log(pair);
+    data.append(pair[0], pair[1]);
+    console.log(pair);
   }
 
   console.log("abc",data);
@@ -97,7 +94,7 @@ function fetchmsg(){
       .then(response => {
       console.log(response);
     serverMessage(response.Reply);
-      speechSynthesis.speak( new SpeechSynthesisUtterance(response.Reply))
+      speechSynthesis.speak( new SpeechSynthesisUtterance(response.Reply));
       })
       .catch(error => console.error('Error h:', error));
 }
