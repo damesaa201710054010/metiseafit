@@ -22,8 +22,5 @@
     "pug": "^2.0.4",
     "uuid": "^3.3.3"
   },
-  "devDependencies": {
-    "ngrok": "^3.2.5",
-    "nodemon": "^1.19.4"
-  }
+  "devDependencies": {}
 }
