@@ -11,6 +11,7 @@ const ROOT_DIR  = require('./rootDir.js');
 const sessionId = uuid.v4();
 
 // settings
+var ip = process.env.IP || "127.0.0.1";
 app.set('port', process.env.PORT || 5000);
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded(
