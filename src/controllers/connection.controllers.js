@@ -6,8 +6,8 @@ connectionCtrl.expose = async (req, res) => {
     if (req.body.queryResult.intent.displayName == "fecha de inscripcion") {
         //console.log("aca");
         que = Connection.find({'tipoDeActividad' : 'inscripcion'});
-        console.log(que);
-        response = que.semestre;
+        //console.log(que);
+        response = que;
         res.json({
             "fulfillmentText": response
         });
