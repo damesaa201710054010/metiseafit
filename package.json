@@ -1,7 +1,7 @@
 {
   "name": "metis-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": ":D",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -24,5 +24,13 @@
     "path": "^0.12.7",
     "pug": "^2.0.4",
     "uuid": "^3.3.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damesaa201710054010/metiseafit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/damesaa201710054010/metiseafit/issues"
+  },
+  "homepage": "https://github.com/damesaa201710054010/metiseafit#readme"
 }

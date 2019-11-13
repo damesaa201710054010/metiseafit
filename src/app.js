@@ -12,6 +12,7 @@ const mySqlConnection = require('./database');
 const sessionId = uuid.v4();
 
 // settings
+//var ip = process.env.IP || "127.0.0.1";
 app.set('port', process.env.PORT || 5000);
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded(
@@ -36,7 +37,7 @@ app.use(function (req, res, next) {
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/users', require('./routes/users'));
 app.use('/', require('./routes/views.routes'));
-app.use('/documentConnection', require('./routes/connection'));
+app.use('/query', require('./routes/connection'));
 
 app.use(express.static(ROOT_DIR + '/views/'));
 
