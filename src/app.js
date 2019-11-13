@@ -88,7 +88,7 @@ async function runSample(userMessage, projectId = 'metis-es-lfflxf') {
 function verifyCalc(response) {
   if (response.fulfillmentText.includes("#calc")) {
     console.log("It Works!");
-    response.fulfillmentText = 2+2;
+    response.fulfillmentText = 21+2;
   } else {
     console.log("ok :/");
   }

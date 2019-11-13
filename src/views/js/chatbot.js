@@ -80,15 +80,16 @@ function serverMessage(response2) {
 
 function fetchmsg(){
 
+  // var url = 'http://localhost:5000/send-msg';
   var url = 'https://metiseafit.azurewebsites.net/send-msg';
   
   const data = new URLSearchParams();
   for (const pair of new FormData(document.getElementById("mymsg"))) {
       data.append(pair[0], pair[1]);
-      console.log(pair)
+      console.log(pair);
   }
 
-  console.log("abc",data)
+  console.log("abc",data);
     fetch(url, {
       method: 'POST',
       body:data
