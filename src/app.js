@@ -12,7 +12,6 @@ const mySqlConnection = require('./database');
 const sessionId = uuid.v4();
 
 // settings
-//var ip = process.env.IP || "127.0.0.1";
 app.set('port', process.env.PORT || 5000);
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded(
@@ -37,7 +36,7 @@ app.use(function (req, res, next) {
 app.use('/api/notes', require('./routes/notes'));
 app.use('/api/users', require('./routes/users'));
 app.use('/', require('./routes/views.routes'));
-app.use('/query', require('./routes/connection'));
+app.use('/documentConnection', require('./routes/connection'));
 
 app.use(express.static(ROOT_DIR + '/views/'));
 
@@ -108,21 +107,24 @@ function assignFunctionToCalc(response) {
         console.log('The result is: ', results[0]);
         console.log('\n\n-> codigo del estudiante: ', results[0].codigoEstudiante);
       });
-      mySqlConnection.end();    
+      mySqlConnection.end();
+      response.fulfillmentText = 2 + 2;
       break;
     case "inscripciones":
       var auxiliary;
       console.log("Inscripciones working");
-      mySqlConnection.query('SELECT * FROM `estudiante` WH', function (error, results, fields) {
+      let query = 'SELECT * FROM `estudiante` WHERE codigoEstudiante = ' + querySubstring;
+      mySqlConnection.query(query, function (error, results, fields) {
         if (error) throw error;
         console.log('The result is: ', results[0]);
         console.log('\n\n-> codigo del estudiante: ', results[0].codigoEstudiante);
         auxiliary = results[0].nombre ;
-
+        console.log('QUery maximus1', auxiliary);
+        let auxiliaryName = "Eres: " + auxiliary;
+        console.log('QUery maximus2', auxiliaryName);
+        response.fulfillmentText = auxiliaryName;
       });
       mySqlConnection.end();   
-
-      response.fulfillmentText = "Eres: " + auxiliary;
       break;
     default:
       console.log('Dem it!');
